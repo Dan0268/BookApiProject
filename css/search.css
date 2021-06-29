@@ -18,6 +18,7 @@
   height: 45px;
   border-radius: 50px;
   text-align: left;
+  box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.308);
 }
 .search-button {
   margin-left: 10px;
@@ -26,4 +27,5 @@
   border-radius: 30px;
   background-color: #01b1c9;
   color: ivory;
+  box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.308);
 }

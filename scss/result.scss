@@ -189,6 +189,7 @@ $bordercolour: grey;
             padding: 10px;
             background-color: $cardbackground;
             color: $cardcolor;
+            box-shadow: 5px 15px 10px rgba(128, 128, 128, 0.308);
             &-top {
                 height: max-content;
                 width: 100%;

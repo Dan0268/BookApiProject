@@ -183,6 +183,7 @@
   padding: 10px;
   background-color: ivory;
   color: #242321;
+  box-shadow: 5px 15px 10px rgba(128, 128, 128, 0.308);
 }
 .result-grid-card--flex-column-space-between-center {
   display: flex;
