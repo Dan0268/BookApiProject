@@ -1,0 +1,67 @@
+@use "flex.scss" as *;
+@use "devices.scss" as devices;
+
+$fontcolor: rgb(36, 35, 33);
+
+.header {
+    // height: 100px;
+    margin: 0;
+    padding: 0%;
+    color: $fontcolor;
+
+    @include flex(column, center, center);
+
+
+    @include devices.xsmall {
+        h1 {
+            font-size: 1.1rem;
+        }
+        p {
+            font-size: 0.9rem;
+        }
+    }
+    @include devices.small {
+        h1 {
+            font-size: 1.3rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+    @include devices.medium {
+        h1 {
+            font-size: 1.9rem;
+        }
+        p {
+            font-size: 1.1rem;
+        }
+    }
+    @include devices.large {
+        h1 {
+            font-size: 2.0rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    @include devices.xlarge {
+        h1 {
+            font-size: 2.1rem;
+        }
+        p {
+            font-size: 1.3rem;
+        }
+    }
+    
+    @include devices.xxlarge {
+        h1 {
+            font-size: 2.2rem;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+    }    
+
+
+    
+}

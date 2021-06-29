@@ -1,0 +1,33 @@
+@use "flex.scss" as *;
+
+$height: 45px;
+$searchbackground: ivory;
+$searchcolor: rgb(36, 35, 33);
+$buttonbackground: #01b1c9;
+$buttoncolor: ivory;
+
+.search {
+    height: 100px;
+    margin-bottom: 20px;
+    @include flex(row, center, center);
+    &-bar {
+        font-size: 1rem;
+        width: 50%;
+        border: 2px solid rgba(0, 0, 0, 0.336);
+        background-color: $searchbackground;
+        color: $searchcolor;
+        padding-left: 25px;
+        height: $height;
+        border-radius: 50px;
+        text-align: left;
+    }
+    &-button {
+        margin-left: 10px;
+        font-size: 1.1rem;
+        padding: 14px;
+        border-radius: 30px;
+        background-color: $buttonbackground;
+        color: $buttoncolor;
+        // border: 2px solid rgba(0, 0, 0, 0.336);
+    }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/noresult.css">
+    <link rel="stylesheet" href="./css/result.css">
+    <link rel="stylesheet" href="./css/body.css">
+    <title>Google Books Project</title>
+</head>
+<header class="header header--flex-column-center-center">
+    <h1>The Google Books Search Engine Project</h1>
+    <p>Use the search bar to look for a book on Google Books</p>
+</header>
+<body class="body">
+    <div class="search search--flex-row-center-center">
+        <input type="text" name="searchBar" id="searchBar" class="search-bar">
+        <button id="searchButton" class="search-button">Search</button>
+    </div>
+    <div id="noResult" class="noresult noresult--flex-column-center-center"></div>
+    <div class="result result--flex-column-center-center">
+        <div id="resultsGrid" class="result-grid"></div>
+    </div>
+    <script type="module" src="./script/main/script.js"></script>
+</body>
+</html>

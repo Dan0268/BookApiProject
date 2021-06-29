@@ -1,0 +1,214 @@
+@use "flex.scss" as *;
+@use "sass:math";
+@use "devices.scss" as devices;
+
+$cardbackground: ivory;
+$cardcolor: rgb(36, 35, 33);
+$bordercolour: grey;
+
+.result {
+    width: 100%;
+    @include flex(column, center, center);
+    
+    &-grid {
+        
+        display: grid;
+        @include devices.xsmall {
+            width: 90%;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 5px;
+            img {
+                width: 80%;
+            }
+            &-card {
+                &-img {
+                    margin: 5px;
+                }
+                &-title {
+                    font-size: 0.9rem;
+                    text-align: center;
+                    height: 40px;
+                    padding: 0%;
+                }
+                &-authors {
+                    font-size: 0.9rem;
+                    height: auto; 
+                }
+                &-description {
+                    font-size: 0.9rem;
+                    text-align: justify;
+                }}
+            
+        }
+        @include devices.small {
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 5px;
+            img {
+                width: 100%;
+            }
+            &-card {
+                &-img {
+                    margin: 5px;
+                }
+                &-title {
+                    font-size: 0.9rem;
+                    text-align: center;
+                    height: 40px;
+                    padding: 0%;
+                }
+                &-authors {
+                    text-align: center;
+                    font-size: 0.9rem;
+                    height: auto; 
+                }
+                &-description {
+                    font-size: 0.9rem;
+                    text-align: justify;
+                }}
+            
+        }
+        @include devices.medium {
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 8px;
+            img {
+                width: 80%;
+            }
+            &-card {
+                &-img {
+                    margin: 5px;
+                }
+                &-title {
+                    font-size: 0.9rem;
+                    text-align: center;
+                    height: 30px;
+                    padding: 0%;
+                }
+                &-authors {
+                    text-align: center;
+                    font-size: 0.9rem;
+                    height: auto; 
+                }
+                &-description {
+                    font-size: 0.9rem;
+                    text-align: justify;
+                }}
+        }
+        @include devices.large {
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            img {
+                width: 90%;
+            }
+            &-card {
+                &-img {
+                    margin: 10px;
+                }
+                &-title {
+                    font-size: 0.9rem;
+                    text-align: center;
+                    height: 30px;
+                    padding: 0%;
+                }
+                &-authors {
+                    text-align: center;
+                    font-size: 0.9rem;
+                    height: auto; 
+                }
+                &-description {
+                    font-size: 0.9rem;
+                    text-align: justify;
+                }}
+        }
+        @include devices.xlarge {
+            width: 100%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            img {
+                width: 90%;
+            }
+            &-card {
+            &-img {
+                margin: 10px;
+            }
+            &-title {
+                font-size: 0.9rem;
+                text-align: center;
+                height: 30px;
+                padding: 0%;
+            }
+            &-authors {
+                text-align: center;
+                font-size: 0.9rem;
+                height: auto; 
+            }
+            &-description {
+                font-size: 0.9rem;
+                text-align: justify;
+            }}
+            }
+        
+        @include devices.xxlarge {
+            width: 95%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 15px;
+            img {
+                width: 100%;
+            }
+            &-card {
+            &-img {
+                margin: 5px;
+            }
+            &-title {
+                font-size: 1rem;
+                text-align: center;
+                height: 30px;
+                padding: 0%;
+            }
+            &-authors {
+                text-align: center;
+                font-size: 1rem;
+                height: auto; 
+            }
+            &-description {
+                font-size: 0.9rem;
+                text-align: justify;
+            }}
+            }    
+            
+        
+        // grid-template-columns: repeat(3, 1fr);
+        // grid-gap: 10px;
+
+        &-card {
+            @include flex(column, space-between, center);
+            border: 2px solid $bordercolour;
+            border-radius: 25px;
+            padding: 10px;
+            background-color: $cardbackground;
+            color: $cardcolor;
+            &-top {
+                height: max-content;
+                width: 100%;
+                @include flex(row, space-between, center);
+
+                &-left {
+                    width: 40%;
+
+                }
+                &-right {
+                    width: 60%;
+                    @include flex(column, center, center);
+                }
+            }
+            &-bottom {
+                min-height: 50%;
+                width: 100%;
+                @include flex(column, flex-start, center);
+            }
+            
+        }
+    }
+}

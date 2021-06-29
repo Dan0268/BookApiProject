@@ -1,0 +1,8 @@
+@use "flex.scss" as *;
+
+.noresult {
+    @include flex(column, center, center);
+    &-notification {
+        font-size: 1.5rem;
+    }
+}
